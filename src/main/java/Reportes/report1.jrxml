@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe7478c7-dce1-4b78-b1cf-247343e637b3">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from factura]]>
+	</queryString>
+	<field name="ID_Factura" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_hora" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_empleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_Cliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_tipo_factura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="427" height="112" uuid="fef3c4ae-3f62-4508-a5c1-e20c29faee6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Agency FB" size="28" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Factura]]></text>
+			</staticText>
+			<image>
+				<reportElement x="427" y="2" width="128" height="112" uuid="509b6d90-ffa4-45fb-b339-ffc51dfe5bc6"/>
+				<imageExpression><![CDATA["C:\\Users\\Kur013\\Desktop\\II PERIODO 2021\\Ingenieria de software I\\28-07-2021\\Base2\\Base2\\CarSoft-Version-2.1\\src\\main\\resources\\Img\\CarSoft-removebg-preview.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="15" width="100" height="20" uuid="a24ae2ce-b3a0-471f-951c-da4662eb197f"/>
+				<text><![CDATA[Número de Factura:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="15" width="100" height="20" uuid="ffb9b8b4-6853-49bf-9063-f9123d2f9cc6"/>
+				<textFieldExpression><![CDATA[$F{ID_Factura}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="344" y="15" width="100" height="20" uuid="49d253f9-f811-4cb6-9e2a-e0e7f20cbd36"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="15" width="100" height="20" uuid="5cbf4770-b694-4155-a861-727e049fb176"/>
+				<textFieldExpression><![CDATA[$F{fecha_hora}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="16" y="27" width="100" height="20" uuid="7305594c-f54d-4dd4-959f-2852aefb8d68"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[ID]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="27" width="100" height="20" uuid="51a833da-a00c-4f4f-a806-be7c057fc840"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[Producto]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="27" width="100" height="20" uuid="d14d6c9e-a400-439a-9718-489b7b4b3804"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[Cantidad
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="27" width="100" height="20" uuid="e1e5648a-72a9-4172-9320-7fae745752c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[SubTotal]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="16" y="12" width="100" height="20" uuid="b3ea0fa0-757c-4787-9ac1-b49d342c0d41"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="12" width="100" height="20" uuid="293eb1e8-bbee-466c-b0f7-8627c65033f4"/>
+				<textFieldExpression><![CDATA[$F{field}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="12" width="100" height="20" uuid="61265f05-661a-454b-96cf-de7f8d0b1282"/>
+				<textFieldExpression><![CDATA[Cantidad
+]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="87" splitType="Stretch">
+			<textField>
+				<reportElement x="279" y="10" width="100" height="20" uuid="291d10f6-39cc-4c58-9124-9ecf46ee7d3b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[ISV 15%:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="10" width="100" height="20" uuid="3d30e61c-7736-4134-8a1d-b7b8840ca2e2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[ISV 15%]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="54" width="100" height="20" uuid="46c685e8-afd9-45c6-9b44-0e0603aa8b73"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[Total:]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="54" width="100" height="20" uuid="c22d40c0-a32a-4dda-b3be-4eb24b3d1ae8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[Total:]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

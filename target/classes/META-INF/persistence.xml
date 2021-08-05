@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="CarSoft" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>Clases.Tipo_Documento</class>
+    <class>Clases.Persona</class>
+    <class>Clases.Pieza</class>
+    <class>Clases.HistoricoPrecioPieza</class>
+    <class>Clases.Marca</class>
+    <class>Clases.TipoCabina</class>
+    <class>Clases.TipoGasolina</class>
+    <class>Clases.TipoPieza</class>
+    <class>Clases.TipoVehiculo</class>
+    <class>Clases.Usuarios</class>
+    <class>Clases.transmision</class>
+    <class>Clases.Tipo_color</class>
+    <class>Clases.Numero_Asientos</class>
+    <class>Clases.Cliente</class>
+    <class>Clases.Pedido</class>
+    <class>Clases.Detalle_Pedido_pieza</class>
+    <class>Clases.Empleado</class>
+    <class>Clases.Cargo_empleado</class>
+    <class>Clases.HistoricoCargo_empleado</class>
+    <class>Clases.HistoricoSueldo_empleado</class>
+    <class>Clases.Vehiculo</class>
+    <class>Clases.Detalle_Pedido_Vehiculo</class>
+    <class>Clases.Detalle_Banco_Cliente</class>
+    <class>Clases.Banco</class>
+    <class>Clases.HistoricoPrecioVehiculos</class>
+    <class>Clases.Factura</class>
+    <class>Clases.PiezaFactura</class>
+    <class>Clases.VehiculoFactura</class>
+    <class>Clases.TipoFactura</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/carsoft?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+    </properties>
+  </persistence-unit>
+</persistence>
